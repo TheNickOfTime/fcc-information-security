@@ -50,7 +50,7 @@ def get_open_ports(target, port_range, verbose = False):
 		sock.close()
 
 	if verbose:
-		title = f'Open ports for {hostname}{f' ({ip})' if ip != hostname else ''}\n'
+		title = f'Open ports for {hostname}{f" ({ip})" if ip != hostname else ""}\n'
 		headers = 'PORT     SERVICE\n'
 		verbose_list = "\n".join([''.join([str(port).ljust(9), common_ports.ports_and_services[port]]) for port in open_ports])
 		return ''.join([title, headers, verbose_list])
